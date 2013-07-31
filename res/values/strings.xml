@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Heart Rate</string>
+    <string name="unknown_device">Unknown Device</string>
+    <string name="menu_scan">Scan</string>
+    <string name="menu_stop">Stop</string>
+    <string name="toast_disconnected">Device disconnected</string>
+</resources>

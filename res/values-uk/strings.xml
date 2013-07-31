@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Серцевий ритм</string>
+    <string name="unknown_device">Невідомий пристрій</string>
+    <string name="menu_scan">Сканувати</string>
+    <string name="menu_stop">Зупинити</string>
+    <string name="toast_disconnected">З\'єднання розірване</string>
+</resources>

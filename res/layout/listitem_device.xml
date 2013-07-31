@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="5dp" >
+
+    <TextView
+        android:id="@+id/device_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/device_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:textSize="12sp" />
+
+</LinearLayout>
