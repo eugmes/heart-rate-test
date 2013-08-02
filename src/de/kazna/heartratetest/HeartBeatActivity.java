@@ -25,7 +25,6 @@ import android.widget.Toast;
 public class HeartBeatActivity extends Activity {
     private static final String TAG = HeartBeatActivity.class.getSimpleName();
 
-    public static final String EXTRAS_DEVICE_NAME = "name";
     public static final String EXTRAS_DEVICE_ADDRESS = "address";
 
     public static final UUID HEART_RATE_SERVICE = UUID.fromString("0000180d-0000-1000-8000-00805f9b34fb");
@@ -92,7 +91,7 @@ public class HeartBeatActivity extends Activity {
         getMenuInflater().inflate(R.menu.heart_beat, menu);
 
         if (mConnected)
-            menu.findItem(R.id.menu_refresh).setActionView(null);
+            menu.findItem(R.id.menu_refresh).setVisible(false);
         else
             menu.findItem(R.id.menu_refresh).setActionView(R.layout.actionbar_indeterminate_progress);
 
@@ -106,15 +105,12 @@ public class HeartBeatActivity extends Activity {
 
         final Intent intent = getIntent();
 
-        //String deviceName = intent.getStringExtra(EXTRAS_DEVICE_NAME);
         mDeviceAddress = intent.getStringExtra(EXTRAS_DEVICE_ADDRESS);
 
         mHeartRateView = (TextView)findViewById(R.id.heart_rate_view);
 
         Intent gattServiceIntent = new Intent(this, BluetoothLeService.class);
         bindService(gattServiceIntent, mServiceConnection, BIND_AUTO_CREATE);
-
-        //setTitle(deviceName);
     }
 
     @Override
