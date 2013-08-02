@@ -73,13 +73,9 @@ public class ScanActivity extends ListActivity {
             return;
 
         final Intent intent = new Intent(this, HeartBeatActivity.class);
-        intent.putExtra(HeartBeatActivity.EXTRAS_DEVICE_NAME, device.getName());
+
         intent.putExtra(HeartBeatActivity.EXTRAS_DEVICE_ADDRESS, device.getAddress());
 
-        /*
-        Bundle animations = ActivityOptions.makeCustomAnimation(getApplicationContext(),
-        		R.anim.slide_left_in, R.anim.slide_left_out).toBundle();
-         */
         if (mScanning)
             scanLeDevice(false);
 
@@ -113,7 +109,7 @@ public class ScanActivity extends ListActivity {
         } else {
             menu.findItem(R.id.menu_scan).setVisible(true);
             menu.findItem(R.id.menu_stop).setVisible(false);
-            menu.findItem(R.id.menu_refresh).setActionView(null);
+            menu.findItem(R.id.menu_refresh).setVisible(false);
         }
         return true;
     }
